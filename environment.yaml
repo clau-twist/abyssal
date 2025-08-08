@@ -1,4 +1,4 @@
-name: abyssal4
+name: abyssal
 channels:
     - pytorch
     - conda-forge
