@@ -119,7 +119,7 @@ def save_embeddings(input_path: str, output_embedding_path: str, esm_model:str, 
                                            esm_model=esm_model, 
                                            layer=layer)
 
-    embeddings = np.array(list(zip(namings, base_embeddings, mutant_embeddings)))
+    embeddings = np.array(list(zip(namings, base_embeddings, mutant_embeddings)), dtype=object)
     
     logger.info(f'Saving embeddings to {output_embedding_path}')
     with open(output_embedding_path, 'wb') as outp:
